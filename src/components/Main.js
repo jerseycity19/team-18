@@ -5,6 +5,8 @@ import Roster from './Roster'
 import Schedule from './Schedule'
 import GetHelp from './GetHelp'
 import Forum from './Forum'
+import Login from './Login'
+
 
 
 // The Main component renders one of the three provided
@@ -20,6 +22,8 @@ const Main = () => (
       <Route path='/schedule' component={Schedule}/>
       <Route path='/getHelp' component={GetHelp}/>
       <Route path='/communityForum' component={Forum}/>
+      <Route path='/login' component={Login}/>
+
 
 
     </Switch>

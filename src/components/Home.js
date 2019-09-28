@@ -2,7 +2,7 @@
 
 import React from 'react'
 import './Home.css';
-import data from './data.PNG';
+import data from './data3.png';
 
 const Home = () => (
   
@@ -10,8 +10,8 @@ const Home = () => (
 
     <h1 id="h1">Let's Shatter the Stigma Together!</h1>
 
-    <div className="image">
-    <img className="image2" src={data} alt="data" />
+    <div  className="image">
+    <img width="500px" className="image2" src={data} alt="data" />
     </div>
 
     <div className="quote">

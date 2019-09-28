@@ -3,8 +3,8 @@
 // solution would be more appropriate.
 const ForumAPI = {
   entries: [
-    { eid: 1, title: "Title 1", content: "Lorem ipsum dolor sit amet, consectetur"},
-    { eid: 2, title: "Title 2", content: "adipiscing elit, sed do eiusmod tempor"}
+    { eid: 1, title: "Drug Abuse for Adults", content: "Lorem ipsum dolor sit amet, consectetur"},
+    { eid: 2, title: "How can I talk to my friend about getting help?", content: "adipiscing elit, sed do eiusmod tempor"}
   ],
   all: function() { return this.entries},
   get: function(id) {
