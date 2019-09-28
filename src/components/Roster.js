@@ -2,10 +2,111 @@ import React, {Component} from 'react'
 import ReactDOM from "react-dom"
 import './Roster.css'
 import {Link} from 'react-router-dom'
+import Chart from "react-apexcharts";
 
+class RadialChart extends React.Component {
+  
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      options: {
+        chart: {
+          toolbar: {
+            show: true
+          }
+        },
+        plotOptions: {
+          radialBar: {
+            startAngle: -135,
+            endAngle: 225,
+            hollow: {
+              margin: 0,
+              size: '70%',
+              background: '#fff',
+              position: 'front',
+              dropShadow: {
+                enabled: true,
+                top: 3,
+                left: 0,
+                blur: 4,
+                opacity: 0.24
+              }
+            },
+            track: {
+              background: '#fff',
+              strokeWidth: '67%',
+              margin: 0, // margin is in pixels
+              dropShadow: {
+                enabled: true,
+                top: -3,
+                left: 0,
+                blur: 4,
+                opacity: 0.35
+              }
+            },
+
+            dataLabels: {
+              name: {
+                offsetY: -10,
+                show: true,
+                color: '#888',
+                fontSize: '17px'
+              },
+              value: {
+                formatter: function (val) {
+                  return parseInt(val);
+                },
+                color: '#111',
+                fontSize: '36px',
+                show: true,
+              }
+            }
+          }
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shade: 'dark',
+            type: 'horizontal',
+            shadeIntensity: 0.5,
+            gradientToColors: ['#ABE5A1'],
+            inverseColors: true,
+            opacityFrom: 1,
+            opacityTo: 1,
+            stops: [0, 100]
+          }
+        },
+        stroke: {
+          lineCap: 'round'
+        },
+        labels: ['Percent'],
+      },
+      series: [props.series],
+    }
+  }
+
+  changeSeries = (num) => {
+  	this.setState({ options : this.state.options , series : [num]});
+  }
+
+  render() {
+    return (
+      <div id="card">
+        <div id="chart">
+          <Chart options={this.state.options} series={this.state.series} type="radialBar" height="350" />
+        </div>
+      </div>
+    );
+  }
+}
 // The Roster component matches one of two different routes
 // depending on the full pathname
 class Roster extends Component {
+  constructor(props) {
+  	super(props);
+  	this.chartRef = React.createRef();
+  }
   percentage = {
     value: 1,
     count: 0
@@ -18,13 +119,15 @@ class Roster extends Component {
 
  myFunction= (number) => {
   this.percentage.value = this.percentage.value * number.target.getAttribute('variable');
+  this.chartRef.current.changeSeries(this.percentage.value*100);
   console.log(this.percentage.value)
   this.percentage.count +=1;
   this.setState({ percentageCount: this.percentage.count})
   if (this.percentage.count == 5) {
     this.state.something = "block"
   }
-}
+ }
+
 render(){
   return(
   <div>
@@ -73,7 +176,7 @@ render(){
             <p>Share with</p> <a Link to=''><u>Instagram</u></a> or <a Link to=''><u>Twitter</u></a>
       </h1>
       : ''}
-
+      <RadialChart series={this.percentage.value} ref={this.chartRef} />
 
   </div>
 
