@@ -9,7 +9,7 @@
 }
 
 .lih {
-  float: left;
+  float: right;
 }
 
 p {
@@ -29,3 +29,12 @@ li a:hover {
   background-color: #EEEEEE;
   color:#60C4B6;
 }
+
+#parent{
+
+height: 150px;
+}
+
+#sideContent1 {padding:0;margin:auto;text-align:left; float:left; display:inline; width: 15%;}
+
+#mainContent1 {font-size:20px;padding-top:25px;float:right; display:inline; width: 84%;}
