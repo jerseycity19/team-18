@@ -36,14 +36,14 @@ const Home = () => (
 
     <div id = "mainContent">
     <p>Here are the characteristics we prioritized:</p>
-    <p>#1: Routine screenings in every medical setting.</p>
-    <p>#2: A personal plan for every patient.</p>
-    <p>#3: Fast access to treatment.</p>
-    <p>#4: Long-term disease management.</p>
-    <p>#5: Coordinated care for every illness.</p>
-    <p>#6: Behavioral health care from legitimate providers.</p>
-    <p>#7: Medications for addiction treatment.</p>
-    <p>#8: Support for recovery outside the doctor’s office.</p>
+    <p>1: Routine screenings in every medical setting.</p>
+    <p>2: A personal plan for every patient.</p>
+    <p>3: Fast access to treatment.</p>
+    <p>4: Long-term disease management.</p>
+    <p>5: Coordinated care for every illness.</p>
+    <p>6: Behavioral health care from legitimate providers.</p>
+    <p>7: Medications for addiction treatment.</p>
+    <p>8: Support for recovery outside the doctor’s office.</p>
     </div>
 
 
