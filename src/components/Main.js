@@ -6,7 +6,7 @@ import Schedule from './Schedule'
 import GetHelp from './GetHelp'
 import Forum from './Forum'
 import Login from './Login'
-
+import TakeAction from './TakeAction'
 
 
 // The Main component renders one of the three provided
@@ -23,6 +23,7 @@ const Main = () => (
       <Route path='/getHelp' component={GetHelp}/>
       <Route path='/communityForum' component={Forum}/>
       <Route path='/login' component={Login}/>
+      <Route path='/takeAction' component={TakeAction}/>
 
 
 
