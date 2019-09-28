@@ -4,11 +4,20 @@ import DonateNow from './DonateNow'
 import './TakeAction.css'
 
 const TakeAction = () => (
-    <div class='cards'> <a>Here's how you can take actions and help our cause</a>
+
+<div>
+   
+    <div id="p4">
+    <p id="p3">Here's how you can take action and help our cause</p>
+    </div>
+    
+    <div class='cards'>
+
     <Subscribe />
     <DonateNow />
     </div>
 
+</div>
 )
 
 export default TakeAction
