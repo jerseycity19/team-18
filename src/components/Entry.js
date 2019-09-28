@@ -3,69 +3,43 @@ import { ForumAPI } from '../api'
 import { Link } from 'react-router-dom'
 
 class Entry extends React.Component {
-	state = {
-		text : '',
-		postArr: ['Lorem ipsum dolor sit amet, consecteturs', 'help']
+	constructor(props) {
+		super(props);
+		this.state = {
+			text : '',
+			postArr: [ForumAPI.get(parseInt(this.props.match.params.eid, 10)).content]
+		};
 	}
 
-	addText = (text) => {
-		this.setState({ text : this.state.text , postArr : this.state.postArr + [this.state.text] })
-	}
-
-	addTextForm = () => {
-		const entry = this.refs.textEntry.value
-		this.props.addText(entry)
-		return (
-			<h2 class="forumContent">this.refs.textEntry.value</h2>
-		)
+	addTextForm = (event) => {
+		event.preventDefault();
+		const entry = document.getElementById('textEntry').value
+		let currArr = this.state.postArr
+		currArr.push(entry)
+		this.setState({ text : entry, postArr : currArr})
 	}
 
 	renderPosts = (index) => {
 		return(
-			<h2 class="forumContent">{this.state.postArr[index]}</h2>
-		);
-	}
-
-	renderAllPosts = () => {
-		for (var i = 0; i < this.state.postArr.length; i++) {
-			return (this.renderPosts(i))
-		}
+			<h2 id="forumContent">{index}</h2>
+		)
 	}
 
 	render() {
-		const entry = ForumAPI.get(parseInt(this.props.match.params.eid), 10)
-		if (!entry) {
-			return <div>Forum post not found!</div>
-		}
 		return (
 			<div>
-			  <h1 class="title">{entry.title}</h1>
-			  {this.renderAllPosts()}
-			  <form ref="textForm" onSubmit={this.addTextForm}>
+			  <h1 id="title">{ForumAPI.get(parseInt(this.props.match.params.eid, 10)).title}</h1>
+			  {this.state.postArr.map((idx) => (
+			  	this.renderPosts(idx)
+			  ))}
+			  <form ref="textForm">
               	<input type="text" id="textEntry" ref="textText"/>
-            	<button type="submit">Add Post</button>
+            	<button type="submit" onClick={this.addTextForm.bind(this)}>Add Post</button>
 			  </form>
 			  <Link to='/communityForum'>Back</Link>
 			</div>
 		)
 	}
 }
-
-// const Entry = (props) => {
-// 	const entry = ForumAPI.get(
-// 		parseInt(props.match.params.eid, 10)
-// 	)
-// 	if (!entry) {
-// 		return <div>Forum post not found!</div>
-// 	}
-// 	return (
-// 		<div>
-// 		  <h1 class="title">{entry.title}</h1>
-// 		  <h2 class="forumContent">{entry.content}</h2>
-
-// 		  <Link to='/communityForum'>Back</Link>
-// 		</div>
-// 	)
-// }
 
 export default Entry
