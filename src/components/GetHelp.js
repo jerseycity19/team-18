@@ -2,13 +2,12 @@ import React from 'react'
 import Iframe from 'react-iframe'
 import { Map, GoogleApiWrapper } from 'google-maps-react';
 import './GetHelp.css';
-
+import Box from '@material-ui/core/Box';
 
 
 const Home = () => (
 
-
-
+<Box>
   
   <div>
     
@@ -49,6 +48,7 @@ const Home = () => (
 
 
   </div>
+  </Box>
 )
 
 export default Home
