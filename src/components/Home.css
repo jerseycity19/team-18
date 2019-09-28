@@ -1,0 +1,30 @@
+#h1{
+
+    color:gray;
+    text-align: center;
+
+}
+
+.image{
+text-align: center;
+}
+
+.image2{
+
+    width:500px;
+}
+
+.quote{
+
+    padding-left: 50px;
+    padding-right: 50px;
+    color:#555555;
+    font-size:18px;
+}
+
+.person{
+
+    font-size:22px;
+    text-align: center;
+
+}

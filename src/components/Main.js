@@ -4,7 +4,7 @@ import Home from './Home'
 import Roster from './Roster'
 import Schedule from './Schedule'
 import GetHelp from './GetHelp'
-import CommunityFourm from './CommunityFourm'
+import Forum from './Forum'
 
 
 // The Main component renders one of the three provided
@@ -19,7 +19,8 @@ const Main = () => (
       <Route path='/roster' component={Roster}/>
       <Route path='/schedule' component={Schedule}/>
       <Route path='/getHelp' component={GetHelp}/>
-      <Route path='/communityFourm' component={CommunityFourm}/>
+      <Route path='/communityForum' component={Forum}/>
+
 
     </Switch>
   </main>
