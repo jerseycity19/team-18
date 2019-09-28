@@ -31,9 +31,10 @@
 	padding: 1%
 }
 
-.forumNewContent {
+#forumNewContent {
 	border-right:10px solid red;
 	background-color: lightgray;
 	font-size: 20px;
 	padding: 1%;
+	text-align: right;
 }

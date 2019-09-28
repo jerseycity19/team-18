@@ -3,50 +3,38 @@ import { ForumAPI } from '../api'
 import { Link } from 'react-router-dom'
 
 class Entry extends React.Component {
-	state = {
-		text : '',
-		postArr: ['Lorem ipsum dolor sit amet, consecteturs', 'help']
+	constructor(props) {
+		super(props);
+		this.state = {
+			text : '',
+			postArr: [ForumAPI.get(parseInt(this.props.match.params.eid, 10)).content]
+		};
 	}
 
-	addText = (str) => {
-		let newArr = this.state.postArr
-		newArr.push(str)
-		console.log(this.state)
-		this.setState({ text : str , postArr : newArr })
-	}
-
-	addTextForm = () => {
-		const entry = this.refs.textEntry.value
-		this.props.addText(entry)
-		return (
-			<h2 id="forumContent">this.refs.textText.value</h2>
-		)
+	addTextForm = (event) => {
+		event.preventDefault();
+		const entry = document.getElementById('textEntry').value
+		let currArr = this.state.postArr
+		currArr.push(entry)
+		this.setState({ text : entry, postArr : currArr})
 	}
 
 	renderPosts = (index) => {
 		return(
-			<h2 id="forumContent">{this.state.postArr[index]}</h2>
-		);
-	}
-
-	renderAllPosts = () => {
-		for (var i = 0; i < this.state.postArr.length; i++) {
-			return (this.renderPosts(i))
-		}
+			<h2 id="forumContent">{index}</h2>
+		)
 	}
 
 	render() {
-		const entry = ForumAPI.get(parseInt(this.props.match.params.eid), 10)
-		if (!entry) {
-			return <div>Forum post not found!</div>
-		}
 		return (
 			<div>
-			  <h1 id="title">{entry.title}</h1>
-			  {this.renderAllPosts()}
-			  <form ref="textForm" onSubmit={this.addTextForm}>
+			  <h1 id="title">{ForumAPI.get(parseInt(this.props.match.params.eid, 10)).title}</h1>
+			  {this.state.postArr.map((idx) => (
+			  	this.renderPosts(idx)
+			  ))}
+			  <form ref="textForm">
               	<input type="text" id="textEntry" ref="textText"/>
-            	<button type="submit">Add Post</button>
+            	<button type="submit" onClick={this.addTextForm.bind(this)}>Add Post</button>
 			  </form>
 			  <Link to='/communityForum'>Back</Link>
 			</div>
