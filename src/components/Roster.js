@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import ReactDOM from "react-dom"
 import './Roster.css'
+import {Link} from 'react-router-dom'
 
 // The Roster component matches one of two different routes
 // depending on the full pathname
@@ -27,6 +28,7 @@ class Roster extends Component {
 render(){
   return(
   <div>
+    
       <p ref="text" style={{display: this.state.showHide}}>How old are you?
       <ul>
       <li><input type="radio" ref='myCheck' variable={.99} onClick={this.myFunction.bind(this)}></input>16-19</li>
@@ -67,8 +69,11 @@ render(){
       </p>
       </p>
       {this.state.percentageCount >= 5 ? 
-      <h1 style={{display:this.state.something}}>You are {parseInt(this.percentage.value*100)}% likely to be addicted to opiods!</h1>
+      <h1 style={{display:this.state.something}}>You are {parseInt(this.percentage.value*100)}% likely to be addicted to opiods!
+            <p>Share with</p> <a Link to=''><u>Instagram</u></a> or <a Link to=''><u>Twitter</u></a>
+      </h1>
       : ''}
+
 
   </div>
 
