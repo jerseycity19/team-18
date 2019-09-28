@@ -5,7 +5,7 @@ import Entry from './Entry'
 
 // The Roster component matches one of two different routes
 // depending on the full pathname
-const Roster = () => (
+const Forum = () => (
   <Switch>
     <Route exact path='/communityForum' component={CommunityForum}/>
     <Route path='/communityForum/:eid' component={Entry}/>
