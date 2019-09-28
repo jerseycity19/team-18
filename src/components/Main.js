@@ -22,8 +22,9 @@ const Main = () => (
       <Route path='/schedule' component={Schedule}/>
       <Route path='/getHelp' component={GetHelp}/>
       <Route path='/communityForum' component={Forum}/>
-      <Route path='/login' component={Login}/>
       <Route path='/takeAction' component={TakeAction}/>
+      <Route path='/login' component={Login}/>
+
 
 
 
