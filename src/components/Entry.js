@@ -9,7 +9,12 @@ const Entry = (props) => {
 	if (!entry) {
 		return <div>Forum post not found!</div>
 	}
-
+	return (
+		<div>
+		  <h1>{entry.title}</h1>
+		  <h2>{entry.content}</h2>
+		  <Link to='/communityForum'>Back</Link>
+		</div>
 	)
 }
 
