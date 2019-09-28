@@ -11,8 +11,8 @@ const Entry = (props) => {
 	}
 	return (
 		<div>
-		  <h1>{entry.title}</h1>
-		  <h2>{entry.content}</h2>
+		  <h1 class="title">{entry.title}</h1>
+		  <h2 class="forumContent">{entry.content}</h2>
 		  <Link to='/communityForum'>Back</Link>
 		</div>
 	)
