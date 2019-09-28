@@ -12,7 +12,7 @@ const Header = () => (
         <li><Link to='/roster'>Roster</Link></li>
         <li><Link to='/schedule'>Schedule</Link></li>
         <li><Link to='/getHelp'>Get Help</Link></li>
-        <li><Link to='/communityFourm'>Community Fourm</Link></li>
+        <li><Link to='/communityForum'>Community Forum</Link></li>
 
       </ul>
     </nav>
