@@ -5,6 +5,7 @@ import './Home.css';
 import data from './data.PNG';
 
 const Home = () => (
+  
   <div>
 
     <h1 id="h1">Let's Shatter the Stigma Together!</h1>
