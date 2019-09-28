@@ -13,15 +13,17 @@
 }
 
 #forumTitle {
+	text-decoration:none;
 	font-family: helvetica;
 	padding:2%;
 	margin:auto;
 	text-align: center;
-	background-color:lightgrey;
-	border:2px solid blue;
-	border-radius:5px;
+	background-color:white;
+	border:2px solid #60C4B6;
+	border-radius:2px;
 	width:80%;
 	font-size:25px;
+	color:#555555;
 }
 
 #forumContent {
