@@ -135,9 +135,9 @@ render(){
       <p ref="text" style={{display: this.state.showHide}}>How old are you?
       <ul>
       <li><input type="radio" ref='myCheck' variable={.99} onClick={this.myFunction.bind(this)}></input>16-19</li>
-      <li><input type="radio" ref='myCheck' variable={.99} onClick={this.myFunction.bind(this)}></input>30</li>
-      <li><input type="radio" ref='myCheck' variable={.99} onClick={this.myFunction.bind(this)}></input>40</li>
-      <li><input type="radio" ref='myCheck' variable={.99} onClick={this.myFunction.bind(this)}></input>50</li>
+      <li><input type="radio" ref='myCheck' variable={.99} onClick={this.myFunction.bind(this)}></input>20-29</li>
+      <li><input type="radio" ref='myCheck' variable={.99} onClick={this.myFunction.bind(this)}></input>30-39</li>
+      <li><input type="radio" ref='myCheck' variable={.99} onClick={this.myFunction.bind(this)}></input>40+</li>
       </ul>
       </p>
       <p ref="text" style={{display: this.state.showHide}}>Whats your level of education?
@@ -158,9 +158,9 @@ render(){
       </p>
       <p ref="text" style={{display: this.state.showHide}}>What's your income level?
       <ul>
-      <li><input type="radio" ref='myCheck' variable={.98} onClick={this.myFunction.bind(this)}></input>$0-10,000</li>
-      <li><input type="radio" ref='myCheck' variable={.92} onClick={this.myFunction.bind(this)}></input>$10,000-50,000</li>
-      <li><input type="radio" ref='myCheck' variable={.95} onClick={this.myFunction.bind(this)}></input>$50,000-10,000</li>
+      <li><input type="radio" ref='myCheck' variable={.98} onClick={this.myFunction.bind(this)}></input>$0-$10,000</li>
+      <li><input type="radio" ref='myCheck' variable={.92} onClick={this.myFunction.bind(this)}></input>$10,000-$50,000</li>
+      <li><input type="radio" ref='myCheck' variable={.95} onClick={this.myFunction.bind(this)}></input>$50,000-$100,000</li>
       <li><input type="radio" ref='myCheck' variable={.91} onClick={this.myFunction.bind(this)}></input>$100,000+</li>
 
       </ul>
