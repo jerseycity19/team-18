@@ -12,7 +12,7 @@ const Home = () => (
   <div>
     
     <div id="header">
-    <h1>Help is close by!</h1>
+    <h1>Help is closer than you think!</h1>
     </div>
 
     <div id="sideContent">
