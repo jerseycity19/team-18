@@ -12,8 +12,7 @@ const Header = () => (
         <li className = "lih"><Link to='/roster'>Roster</Link></li>
         <li className = "lih"><Link to='/schedule'>Schedule</Link></li>
         <li className = "lih"><Link to='/getHelp'>Get Help</Link></li>
-        <li className = "lih"><Link to='/communityFourm'>Community Fourm</Link></li>
-
+        <li className = "lih"><Link to='/communityForum'>Community Forum</Link></li>
       </ul>
     </nav>
   </header>
