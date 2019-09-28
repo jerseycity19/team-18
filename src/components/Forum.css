@@ -1,0 +1,39 @@
+.title {
+	font-family: helvetica;
+	text-align: center;
+	font-size: 40px;
+}
+
+.forumContainer {
+	list-style:none;
+	margin:auto;
+	display:grid;
+	margin-top:2.5%;
+	margin-bottom:2.5%;
+}
+
+.forumTitle {
+	font-family: helvetica;
+	padding:2%;
+	margin:auto;
+	text-align: center;
+	background-color:lightgrey;
+	border:2px solid blue;
+	border-radius:5px;
+	width:80%;
+	font-size:25px;
+}
+
+.forumContent {
+	border-left:10px solid blue;
+	background-color: lightgray;
+	font-size: 20px;
+	padding: 1%
+}
+
+.forumNewContent {
+	border-right:10px solid red;
+	background-color: lightgray;
+	font-size: 20px;
+	padding: 1%;
+}
