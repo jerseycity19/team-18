@@ -21,6 +21,7 @@ const Main = () => (
       <Route path='/getHelp' component={GetHelp}/>
       <Route path='/communityForum' component={Forum}/>
 
+
     </Switch>
   </main>
 )
