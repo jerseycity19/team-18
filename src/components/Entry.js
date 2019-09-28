@@ -34,9 +34,9 @@ class Entry extends React.Component {
 			  ))}
 			  <form ref="textForm">
               	<input type="text" id="textEntry" ref="textText"/>
-            	<button type="submit" onClick={this.addTextForm.bind(this)}>Add Post</button>
+            	<button className="button" type="submit" onClick={this.addTextForm.bind(this)}>Add Post</button>
 			  </form>
-			  <Link to='/communityForum'>Back</Link>
+			  <Link id="back" to='/communityForum'>Back</Link>
 			</div>
 		)
 	}
