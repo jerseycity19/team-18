@@ -172,8 +172,9 @@ render(){
       </p>
       </p>
       {this.state.percentageCount >= 5 ? 
-      <h1 style={{display:this.state.something}}>You are {parseInt(this.percentage.value*100)}% likely to be addicted to opiods!
-            <p>Share with</p> <a Link to=''><u>Instagram</u></a> or <a Link to=''><u>Twitter</u></a>
+      <h1 style={{display:this.state.something}}>Your demographic is {parseInt(this.percentage.value*100)}% likely to be addicted to opioids!
+            <p>Share with</p> <a target="_blank" href="https://www.instagram.com/weareshatterproof/"><u>Instagram</u></a> or <a target="_blank"  href="https://twitter.com/ShatterproofHQ
+"><u>Twitter</u></a>
       </h1>
       : ''}
       <RadialChart series={this.percentage.value} ref={this.chartRef} />
